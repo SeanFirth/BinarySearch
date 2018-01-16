@@ -23,6 +23,8 @@ We know that 8<9 so we can also disregard the left hand side, just like before, 
 
 Which leaves us with the result of 9, as 10>9, so it must fall to the other value.
 
+It is more efficient than a linear search, as that would check every element in the array for the target value until it finds it - which is inefficient and slow compared to a binary search.
+
 Below is the explanation of how this search is implemented in C#
 
 ## Code in full
@@ -37,9 +39,10 @@ namespace BinarySearch {
 
             int[] valueArray ={ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int minvalue = 0;
-            int maxvalue = valueArray.Length;
-            bool found = false;
+            int maxvalue = valueArray.Length+1;
             int middlePoint = valueArray.Length / 2;
+            bool found = false;
+            
             
 
             Console.WriteLine("Number To Find :");
@@ -79,3 +82,47 @@ namespace BinarySearch {
     }
 }
 ```
+
+## Code "walk-through"
+
+```cs
+
+int[] valueArray ={ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+int minvalue = 0;
+int maxvalue = valueArray.Length+1;
+int middlePoint = valueArray.Length / 2;
+bool found = false;
+
+
+```
+
+This sets up a hard-coded integer array of 1-10 which is used for the search. The search will work provided that a sorted integer array is provided, so it could be improved by letting the user enter the numbers they want. However, as a demonstration of the algorithm, this array is a simple example to use.
+
+The rest of the above code block is simple variable declaration:
+
+* integer minvalue = a starting point of 0 (the first index) so the search can begin. This changes later on as the search is run.
+
+
+* integer maxvalue = to begin with, this is just the length of the array, however this also changes as the array is split.
+
+
+* integer middlePoint = to start, this is the length of the array divided by 2 to find the middle. As the search continues (as per the explanation above) this will also change
+
+
+* boolean found = used later on in the while loop to state when the desired number has been found
+
+Below is the user input
+
+```cs
+Console.WriteLine("Number To Find :");
+int valueSearch = Convert.ToInt32(Console.ReadLine());
+
+```
+
+The program then asks the user for the number that they would like to find using a binary search and converts it to an integer - if the user enters a value that cannot be converted to an integer, the program will crash at this point. To improve, I could implement a way of catching any errors and/or not accepting any input until it can be converted fully to an integer.
+
+Below is the main loop:
+
+(WIP)
+
+

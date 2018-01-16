@@ -12,8 +12,9 @@ namespace BinarySearch {
             int[] valueArray ={ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int minvalue = 0;
             int maxvalue = valueArray.Length+1;
-            bool found = false;
             int middlePoint = valueArray.Length / 2;
+            bool found = false;
+            
             
 
             Console.WriteLine("Number To Find :");

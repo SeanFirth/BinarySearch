@@ -22,8 +22,8 @@ namespace BinarySearch {
 
             while (!found) {
 
-                Console.WriteLine(Environment.NewLine);
-                Console.WriteLine("Array split, the middle point of the array is: " + middlePoint.ToString());
+                //Console.WriteLine(Environment.NewLine);
+                //Console.WriteLine("Array split, the middle point of the array is: " + middlePoint.ToString());
                 
 
                 if (valueSearch == middlePoint) {

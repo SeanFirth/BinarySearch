@@ -14,9 +14,7 @@ namespace BinarySearch {
             int maxvalue = valueArray.Length+1;
             int middlePoint = valueArray.Length / 2;
             bool found = false;
-            
-            
-
+           
             Console.WriteLine("Number To Find :");
             int valueSearch = Convert.ToInt32(Console.ReadLine());
 

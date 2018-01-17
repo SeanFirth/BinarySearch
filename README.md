@@ -19,9 +19,9 @@ Now we know that 5<9 so we can disregard the left side of the array, and focus o
 
 We know that 8<9 so we can also disregard the left hand side, just like before, leaving us with.
 
-9,10
+8,**9**,10
 
-Which leaves us with the result of 9, as 10>9, so it must fall to the other value.
+Which leaves us with a midpoint of 9, which is the value we were looking for to start with.
 
 It is more efficient than a linear search, as that would check every element in the array for the target value until it finds it (or it runs out of elements to check, determining that the value cannot be found) - which is inefficient and slow compared to a binary search.
 

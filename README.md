@@ -15,7 +15,7 @@ We'd start by splitting the array into half, so there are two distinct sections.
 
 Now we know that 5<9 so we can disregard the left side of the array, and focus on just the side that is greater than 5.
 
-6,7,**8**,9,10
+5,6,7,**8**,9,10
 
 We know that 8<9 so we can also disregard the left hand side, just like before, leaving us with.
 
